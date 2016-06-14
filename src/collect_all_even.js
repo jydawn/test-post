@@ -19,7 +19,7 @@ function collect_same_elements(collection_a, object_b) {
             }
         }
     }
-    return temp;
+    return result;
 }
 
 module.exports = collect_same_elements;
