@@ -3,7 +3,7 @@ function collect_same_elements(collection_a, object_b) {
  //在此处写代码
   var result = [], temp= [];
 	 var i,j,k,t,key;
-    for( i=0;j<collection_a.length;j++){
+    for( i=0;i<collection_a.length;i++){
         for( key in collection_a[i]){
             temp.push(collection_a[i][key]);
         }
