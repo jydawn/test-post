@@ -1,25 +1,32 @@
 
 function collect_same_elements(collection_a, object_b) {
  //在此处写代码
-  var result=[],temp1=[],temp2=[];
-    for(var i=0;i<collection_a.length;i++){
-        for(var key in collection_a[i]){
-            temp1.push(collection_a[i][key]);
+ var d = [];
+    var c = [];
+
+    var ci=0;
+    var ni=0;
+
+    for(var j=0;j<collection_a.length;j++){
+        for(var key in collection_a[j]){
+            var m = collection_a[j][key];
+            c.push(m);
         }
     }
 
-    for(var j in object_b){
-        temp2.push(object_b[j]);
+    for(var i in object_b){
+        var n =object_b[i];
     }
-    for(var k = 0; k < temp1.length; k++){
-        for(var t = 0; t < temp2.length; t++){
-            if(temp1[k] == temp2[t] ){
-                result.push( temp2[t]);
+    for(var k = 0; k < c.length; k++){
+        for(var g = 0; g < n.length; g++){
+            if(c[k] == n[g] ){
+                d.push( n[g]);
                 break;
             }
         }
     }
-    return result;
+
+    return d;
 }
 
 module.exports = collect_same_elements;
