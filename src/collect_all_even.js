@@ -1,20 +1,20 @@
 
 function collect_same_elements(collection_a, object_b) {
  //在此处写代码
-  var result = [], temp= [];
+  var result=[],temp1=[],temp2=[];
     for(var i=0;i<collection_a.length;i++){
         for(var key in collection_a[i]){
-            temp.push(collection_a[i][key]);
+            temp1.push(collection_a[i][key]);
         }
     }
 
     for(var j in object_b){
-        var n =object_b[j];
+        temp2.push(object_b[j]);
     }
-    for(var k = 0; k < temp.length; k++){
-        for(var t = 0; t < n.length; t++){
-            if(temp[k] == n[t] ){
-                result.push( n[t]);
+    for(var k = 0; k < temp1.length; k++){
+        for(var t = 0; t < temp2.length; t++){
+            if(temp1[k] == temp2[t] ){
+                result.push( temp2[t]);
                 break;
             }
         }
